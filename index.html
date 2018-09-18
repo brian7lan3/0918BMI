@@ -4,14 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>今天是九月十七日</title>
+    <title>BMI</title>
 </head>
 
 <body>
+    身高(cm):<input type="number" id="h"><br>
+    體重(kg):<input type="number" id="w"><br>
+    <button onclick="getBMI()">計算</button>
+    <hr>
+    BMI:<span id="bmi"></span><br>
+    
     <script>
-        document.writeln("傑尼龜");
-        console.log("皮卡丘");
+    function getBMI()
+
+    {
+        var h = document.getElementById("h").value;
+
+        var w = document.getElementById("w").value;
+
+        bmi = w / ((h/100)^2);
+        if(bmi < 20)
+        ans = "太輕了";
+        else if(bmi > 25)
+        ans = "太重了";
+        else
+        ans = "體重正常";
+    }
+
 
     </script>
+
 </body>
 </html>
